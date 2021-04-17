@@ -9,7 +9,7 @@
 class Displayable;
 enum MenuModeType { MMT_NONE,MMT_MAIN, MMT_CREDITS,MMT_HIGHSCORE,
 	MMT_CONTROLS,MMT_PAUSE, MMT_SETTINGS, MMT_SUMMARY, MMT_NEWHIGH,
-	MMT_SELECTSONG };
+	MMT_SELECTSONG, MMT_ERROR  };
 
 class MenuMode
 {
@@ -36,6 +36,9 @@ public:
 	void setMenuModeType(enum MenuModeType menuModeType);
 		// Gets the menu mode.
 		enum MenuModeType getMenuModeType();
+		// For the error mode.
+		std::string error1;
+		std::string error2;
 protected:
 		// The main menu handler.
 		void selectMain();
